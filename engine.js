@@ -39,6 +39,18 @@ class Engine {
         }
     }
 
+    addAction(action, data, key) {
+        let button = this.actionsContainer.appendChild(document.createElement("button"));
+        button.innerText = action;
+        button.style.color = "blue";
+        button.onclick = () => {
+            while(this.actionsContainer.firstChild) {
+                this.actionsContainer.removeChild(this.actionsContainer.firstChild)
+            }            
+            this.scene.handleAction(data, key);
+        }
+    }
+
     setTitle(title) {
         document.title = title;
         this.header.innerText = title;
@@ -47,6 +59,7 @@ class Engine {
     show(msg) {
         let div = document.createElement("div");
         div.innerHTML = msg;
+        //this.output.innerHTML = msg; also comment out top and bottom
         this.output.appendChild(div);
     }
 }

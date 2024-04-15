@@ -1,58 +1,350 @@
 {
-    "Title": "Campus Life on the West Side",
-    "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
-    "InitialLocation": "Kresge",
+    "Title": "Three Nights at Chuck E. Cheese",
+    "Credits": "Created by Adam Smith (amsmith@ucsc.edu)\n Edited by Michael Campanile (mecampan@ucsc.edu).",
+    "GameOver": "You were unable to escape the Animatronic.<p>GAME OVER<p>Created by Adam Smith (amsmith@ucsc.edu) Edited by Michael Campanile (mecampan@ucsc.edu).",
+    "InitialLocation": "Security",    
     "Locations": {
-        "Kresge": {
-            "Body": "This is Kresge College, lots of nice trees.",
+        "Arcade": {
+            "LongName": "Gaming Arcade",     
+            "Body": "There are tons of retro and new games here just begging to steal your tokens.",
             "Choices": [
                 {
-                    "Text": "South",
-                    "Target": "Porter"
-                }
-            ]
-        },
-        "Porter": {
-            "Body": "This is Porter College, the trees are nice here too.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Kresge"
+                    "Text": "Employee Lounge",
+                    "Target": "Employee"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Rachel Carson"
+                    "Text": "Skee-Ball Alley",
+                    "Target": "Skeeball"
                 }
-            ]
-        },
-        "Rachel Carson": {
-            "Body": "Rachel Carson College, more sun and fewer trees.",
-            "Choices": [
+            ],
+            "Actions": [
                 {
-                    "Text": "North",
-                    "Target": "Porter"
+                    "Text": "Check Inventory",
+                    "Target": "Inventory"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Oakes"
+                    "Text": "Search",
+                    "Target": "Search"
                 }
-            ]
+            ]            
         },
-        "Oakes": {
-            "Body": "Oakes College, even the buildings have tree bark on them.",
+        "Bathrooms": {
+            "LongName": "Bathrooms",     
+            "Body": "Yep, bathrooms",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Rachel Carson"
+                    "Text": "Prize Exchange",
+                    "Target": "Prize"
+                }
+            ],
+            "Actions": [
+                {
+                    "Text": "Check Inventory",
+                    "Target": "Inventory"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Beyond"
+                    "Text": "Search",
+                    "Target": "Search"
                 }
-            ]
+            ] 
         },
-        "Beyond": {
-            "Body": "Grass, don't forget to check for ticks!"
+        "Buffet": {
+            "LongName": "Buffet",     
+            "Body": "An empty salad bar and self serve pizza buffet.",
+            "Choices": [
+                {
+                    "Text": "Main Dining Hall",
+                    "Target": "Dining"
+                },
+                {
+                    "Text": "Kitchen",
+                    "Target": "Kitchen"
+                }
+            ],
+            "Actions": [
+                {
+                    "Text": "Check Inventory",
+                    "Target": "Inventory"
+                },
+                {
+                    "Text": "Search",
+                    "Target": "Search"
+                }
+            ] 
+        },
+        "Dining": {
+            "LongName": "Main Dining Hall",     
+            "Body": "The largest room in the building. Rows and columns of tables allow for an occupancy of 300.",
+            "Choices": [
+                {
+                    "Text": "Audio Animatronic Stage",
+                    "Target": "Stage"
+                },
+                {
+                    "Text": "Buffet",
+                    "Target": "Buffet"
+                },               
+                {
+                    "Text": "Private Rooms",
+                    "Target": "Private"
+                }, 
+                {
+                    "Text": "Play Place",
+                    "Target": "Play"
+                },
+                {
+                    "Text": "Skee-Ball Alley",
+                    "Target": "Skeeball"
+                },
+                {
+                    "Text": "Entrance",
+                    "Target": "Entrance"
+                }
+            ],
+            "Actions": [
+                {
+                    "Text": "Check Inventory",
+                    "Target": "Inventory"
+                },
+                {
+                    "Text": "Search",
+                    "Target": "Search"
+                }
+            ] 
+        },
+        "Employee": {
+            "LongName": "Employee Lounge",
+            "Body": "A place to get away from the kids and take a 15 minute break.",
+            "Choices": [
+                {
+                    "Text": "Security Office",
+                    "Target": "Security"
+                },
+                {
+                    "Text": "Gaming Arcade",
+                    "Target": "Arcade"
+                }
+            ],
+            "Actions": [
+                {
+                    "Text": "Check Inventory",
+                    "Target": "Inventory"
+                },
+                {
+                    "Text": "Search",
+                    "Target": "Search"
+                }
+            ] 
+        },
+        "Entrance": {
+            "LongName": "Entrance",     
+            "Body": "The entryway to your favorite job.",
+            "Choices": [
+                {
+                    "Text": "Main Dining Hall",
+                    "Target": "Dining"
+                },
+                {
+                    "Text": "Outside",
+                    "Target": "Outside"
+                }
+            ],
+            "Actions": [
+                {
+                    "Text": "Check Inventory",
+                    "Target": "Inventory"
+                },
+                {
+                    "Text": "Search",
+                    "Target": "Search"
+                }
+            ] 
+        },
+        "Kitchen": {
+            "LongName": "Kitchen",     
+            "Body": "A magical place where all those cardboard tasting pizzas come from.",
+            "Choices": [
+                {
+                    "Text": "Buffet",
+                    "Target": "Buffet"
+                }
+            ],
+            "Actions": [
+                {
+                    "Text": "Check Inventory",
+                    "Target": "Inventory"
+                },
+                {
+                    "Text": "Search",
+                    "Target": "Search"
+                }
+            ] 
+        },
+        "Play": {
+            "LongName": "Play Place",     
+            "Body": "A play area that you shouldn't let your children within 10 feet of.",
+            "Choices": [
+                {
+                    "Text": "Main Dining Hall",
+                    "Target": "Dining"
+                },
+                {
+                    "Text": "Prize Exchange",
+                    "Target": "Prize"
+                }
+            ],
+            "Actions": [
+                {
+                    "Text": "Check Inventory",
+                    "Target": "Inventory"
+                },
+                {
+                    "Text": "Search",
+                    "Target": "Search"
+                }
+            ] 
+        },
+        "Prize": {
+            "LongName": "Prize Exchange",     
+            "Body": "A place to echange all your hard earned tickets.",
+            "Choices": [
+                {
+                    "Text": "Audio Animatronic Stage",
+                    "Target": "Stage"
+                },
+                {
+                    "Text": "Bathrooms",
+                    "Target": "Bathrooms"
+                },       
+                {
+                    "Text": "Play Place",
+                    "Target": "Play"
+                }
+            ],
+            "Actions": [
+                {
+                    "Text": "Buy Toy Hammer - 10 Tickets",
+                    "Target": "Buy_Hammer"
+                },
+                {
+                    "Text": "Check Inventory",
+                    "Target": "Inventory"
+                },
+                {
+                    "Text": "Search",
+                    "Target": "Search"
+                }
+            ]  
+            
+        },
+        "Private": {
+            "LongName": "Private Rooms",     
+            "Body": "Seculded rooms for an upcharge.",
+            "Choices": [
+                {
+                    "Text": "Main Dining Hall",
+                    "Target": "Dining"
+                }
+            ],
+            "Actions": [
+                {
+                    "Text": "Check Inventory",
+                    "Target": "Inventory"
+                },
+                {
+                    "Text": "Search",
+                    "Target": "Search"
+                }
+            ] 
+        },
+        "Skeeball": {
+            "LongName": "Skee-Ball Alley",     
+            "Body": "A long row of Skee-Ball machines line the edge of the area.",
+            "Choices": [
+                {
+                    "Text": "Gaming Arcade",
+                    "Target": "Arcade"
+                },
+                {
+                    "Text": "Main Dining Hall",
+                    "Target": "Dining"
+                }
+            ],
+            "Actions": [
+                {
+                    "Text": "Check Inventory",
+                    "Target": "Inventory"
+                },
+                {
+                    "Text": "Search",
+                    "Target": "Search"
+                }, 
+                {
+                    "Text": "Play Skee-Ball",
+                    "Target": "Games"
+                }
+            ] 
+        },
+        "Stage": {
+            "LongName": "Audio Animatronic Stage",
+            "Body": "Several shut down Animatronics stand here, waiting, watching...",
+            "Choices": [
+                {
+                    "Text": "Security Office",
+                    "Target": "Security"
+                },
+                {
+                    "Text": "Main Dining Hall",
+                    "Target": "Dining"
+                },                
+                {
+                    "Text": "Prize Exchange",
+                    "Target": "Prize"
+                }
+            ],
+            "Actions": [
+                {
+                    "Text": "Check Inventory",
+                    "Target": "Inventory"
+                },
+                {
+                    "Text": "Search",
+                    "Target": "Search"
+                }
+            ] 
+        },
+        "Security": {
+            "LongName": "Security Office",
+            "Body": "The office where you're safe... Or maybe not.",
+            "Choices": [
+                {
+                    "Text": "Audio Animatronic Stage",
+                    "Target": "Stage"
+                },
+                {
+                    "Text": "Employee Lounge",
+                    "Target": "Employee"
+                }
+
+            ],
+            "Actions": [
+                {
+                    "Text": "Check Inventory",
+                    "Target": "Inventory"
+                },
+                {
+                    "Text": "Search",
+                    "Target": "Search"
+                },
+                {
+                    "Text": "Check Surveillance T.V.",
+                    "Target": "TV"
+                }
+            ] 
+        },                    
+        "Outside": {
+            "Body": "You used the hammer to break out and escaped!"
         }
     }
-}
+}    
+ 
