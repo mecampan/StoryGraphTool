@@ -12,22 +12,6 @@ let machines = [
     { id: 'C', location: 'Play', active: false, turn_count: 3 },
 ];
 
-
-let machineA = {
-    location: "Stage",
-    turn_count: 3
-}
-let machineB = {
-    location: "Kitchen",
-    turn_count: 3,
-    active: false
-}
-let machineC = {
-    location: "Play",
-    turn_count: 3,
-    active: false
-}
-
 class Start extends Scene {
     create() {
         this.engine.setTitle(this.engine.storyData.Title);
@@ -172,7 +156,6 @@ class Location extends Scene {
 
     handleAttack() {
         for (let attack in machines) {
-            console.log(machines[attack].location);
             if (machines[attack].active && inventory.location === machines[attack].location) {
                 inventory.health--;
 
