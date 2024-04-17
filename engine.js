@@ -59,9 +59,18 @@ class Engine {
     show(msg) {
         let div = document.createElement("div");
         div.innerHTML = msg;
-        //this.output.innerHTML = msg; also comment out top and bottom
         this.output.appendChild(div);
+        this.scrollToBottom();
     }
+
+    // Borrow from: https://www.basedash.com/blog/how-to-scroll-automatically-to-the-bottom-of-a-page-in-javascript
+    // Function to scroll to the bottom of the page
+    scrollToBottom() {
+        // Use setTimeout to allow DOM updates before scrolling
+        setTimeout(() => {
+        window.scrollTo(0, document.body.scrollHeight);
+        }, 0);
+    }  
 }
 
 class Scene {
@@ -77,3 +86,4 @@ class Scene {
         console.warn('no choice handler on scene ', this);
     }
 }
+

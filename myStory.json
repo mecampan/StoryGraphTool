@@ -1,8 +1,8 @@
 {
-    "Title": "Three Nights at Chuck E. Cheese",
+    "Title": "One Night at Chuck E. Cheese",
     "Credits": "Created by Adam Smith (amsmith@ucsc.edu)\n Edited by Michael Campanile (mecampan@ucsc.edu).",
-    "GameOver": "You were unable to escape the Animatronic.<p>GAME OVER<p>Created by Adam Smith (amsmith@ucsc.edu) Edited by Michael Campanile (mecampan@ucsc.edu).",
     "InitialLocation": "Security",    
+    "Introduction": "You find a note that reads:<p>Dear security guard, <p>Would you like to play a game? The animatronic that entertains children in the daytime also serves as a nightguard. While that might make your job easier, it can't help but give a big hug to whoever gets too close to it. While that might not seem so bad, it tends to hug a bit too hard not knowing its own strength, as evident why our last guard had to go on a leave of absence. Feel free to wander around and collect coins and play games, everything has been left on to ease your boredom, just make sure to keep watch for the animatronic unless you don't mind an early retirement.",
     "Locations": {
         "Arcade": {
             "LongName": "Gaming Arcade",     
@@ -139,6 +139,7 @@
         "Entrance": {
             "LongName": "Entrance",     
             "Body": "The entryway to your favorite job.",
+            "Locked": "You're not strong enough to open the locked door. Maybe you can find something to break it open?<p>",
             "Choices": [
                 {
                     "Text": "Main Dining Hall",
@@ -234,8 +235,11 @@
                     "Text": "Search",
                     "Target": "Search"
                 }
-            ]  
-            
+            ],
+            "Items": {
+                "Have_Money": "You bought the hammer!",
+                "Poor": "You don't have enough tickets to get the hammer. Might have to player some games.<p>"
+            }  
         },
         "Private": {
             "LongName": "Private Rooms",     
@@ -283,7 +287,9 @@
                     "Text": "Play Skee-Ball",
                     "Target": "Games"
                 }
-            ] 
+            ],
+            "Coins_Use": "You inserted a coin into the machine and player a round of Skee-Ball.",
+            "Coins_Need": "You need to find more coins to play this game.<p>"
         },
         "Stage": {
             "LongName": "Audio Animatronic Stage",
@@ -339,11 +345,36 @@
                 {
                     "Text": "Check Surveillance T.V.",
                     "Target": "TV"
+                },
+                {
+                    "Text": "Piece of Paper",
+                    "Target": "Notice"
                 }
             ] 
         },                    
         "Outside": {
             "Body": "You used the hammer to break out and escaped!"
+        },
+        "GameOver": {
+            "Body": "You were unable to escape the Animatronic.<p>GAME OVER<p>"
+        }
+    },
+    "Animatronic":
+    {
+        "Attack": {
+            "Body": "<p class='danger'>An animatronic swipes at you doing a bit of damage! Better get out of here quickly!</p>" 
+        },
+        "Stay": {
+            "Body": "<p class='danger'>An animatronic swipes at you doing a bit of damage! It's not safe to remain in the same room as it!</p>"
+        },
+        "GameOver": {
+            "Body": "<p class ='danger'>An animatronic attacks you while you're already weak! You can't defend against it!</p>"
+        },
+        "Moving": {
+            "Body": "<p class='danger'>An Animatronic is on the move!</p>"
+        },
+        "Arrived": {
+            "Body": "<p class='danger'>The animatronic entered the same room as you! You should probably leave before it notices!</p>"
         }
     }
 }    
